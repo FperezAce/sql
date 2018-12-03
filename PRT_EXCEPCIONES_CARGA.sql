@@ -1,0 +1,30 @@
+--------------------------------------------------------
+--  File created - Thursday-November-24-2016   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table PRT_EXCEPCIONES_CARGA
+--------------------------------------------------------
+
+  CREATE TABLE "PRT"."PRT_EXCEPCIONES_CARGA" 
+   (	"PRT_PERIODO" NUMBER(6,0), 
+	"PRT_RUT_CIA" NUMBER(9,0), 
+	"PRT_GRUPO" NUMBER(1,0), 
+	"PRT_CODIGO" VARCHAR2(7 BYTE), 
+	"PRT_MOTIVO" VARCHAR2(1000 BYTE), 
+	"PRT_USUARIO" VARCHAR2(20 BYTE), 
+	"PRT_FECHA" DATE, 
+	"PRT_ESTADO" NUMBER(1,0) DEFAULT 1
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "PRT_DAT" ;
+--------------------------------------------------------
+--  Constraints for Table PRT_EXCEPCIONES_CARGA
+--------------------------------------------------------
+
+  ALTER TABLE "PRT"."PRT_EXCEPCIONES_CARGA" MODIFY ("PRT_MOTIVO" NOT NULL ENABLE);
+  ALTER TABLE "PRT"."PRT_EXCEPCIONES_CARGA" MODIFY ("PRT_RUT_CIA" NOT NULL ENABLE);
+  ALTER TABLE "PRT"."PRT_EXCEPCIONES_CARGA" MODIFY ("PRT_PERIODO" NOT NULL ENABLE);
